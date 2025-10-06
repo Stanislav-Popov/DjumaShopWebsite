@@ -1,0 +1,50 @@
+/** @format */
+
+@media (max-width: 1200px) {
+    .headerStyle {
+        padding: 0 80px !important;
+    }
+}
+
+.headerStyle {
+    height: 64px;
+    color: #000;
+    background-color: #fff;
+    padding: 0 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navButtonsBlock {
+    display: flex;
+    gap: 50px;
+}
+
+.logoSearchBlock {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.searchStyle {
+    width: 370px;
+    background-color: #f5f5f5;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 25px;
+}
+.logo:hover {
+    color: #000;
+}
+
+.navButton {
+    font-size: 16px;
+    color: #cfcfcf;
+    transition: color 0.2s ease-in-out;
+}
+.navButton:hover,
+.active {
+    color: #000;
+}
