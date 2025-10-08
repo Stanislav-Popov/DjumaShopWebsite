@@ -19,7 +19,7 @@ const footerStyle = {
 const layoutStyle = {
     borderRadius: 8,
     overflowY: "auto",
-
+    minHeight: "100vh",
     width: "100%",
 }
 

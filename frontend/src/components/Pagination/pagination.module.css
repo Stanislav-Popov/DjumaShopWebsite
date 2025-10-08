@@ -1,0 +1,39 @@
+/** @format */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.pageButton {
+    width: 34px;
+    height: 34px;
+    border: none;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.1s;
+}
+.pageButton:hover:not(:disabled) {
+    background-color: #f0f0f0;
+}
+.pageButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.active {
+    background-color: #000;
+    color: white;
+}
+.active:hover {
+    background-color: #262626;
+}
+
+.ellipsis {
+    display: flex;
+    align-items: self-end;
+}
