@@ -1,17 +1,10 @@
 /** @format */
 import { Layout } from "antd"
-import CatalogUnderHeader from "./../components/CatalogUnderHeader"
 import AppHeader from "../components/AppHeader"
+import CatalogContent from "../components/catalogContent"
 
-const { Footer, Sider, Content } = Layout
+const { Footer, Sider } = Layout
 
-const contentStyle = {
-    textAlign: "center",
-    minHeight: 120,
-    lineHeight: "120px",
-    color: "#fff",
-    backgroundColor: "#0958d9",
-}
 const siderStyle = {
     textAlign: "center",
     lineHeight: "120px",
@@ -25,8 +18,8 @@ const footerStyle = {
 }
 const layoutStyle = {
     borderRadius: 8,
-    overflow: "hidden",
-    height: "100vh",
+    overflowY: "auto",
+
     width: "100%",
 }
 
@@ -38,9 +31,7 @@ export default function CatalogPage() {
                 <Sider width="25%" style={siderStyle}>
                     Sider
                 </Sider>
-                <Content style={contentStyle}>
-                    <CatalogUnderHeader></CatalogUnderHeader>
-                </Content>
+                <CatalogContent></CatalogContent>
             </Layout>
             <Footer style={footerStyle}>Footer</Footer>
         </Layout>
