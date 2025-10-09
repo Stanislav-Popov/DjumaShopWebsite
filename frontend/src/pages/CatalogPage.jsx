@@ -2,6 +2,7 @@
 import { Layout } from "antd"
 import AppHeader from "../components/AppHeader"
 import CatalogContent from "../components/catalogContent"
+import { CatalogProvider } from "../context/CatalogContext"
 
 const { Footer, Sider } = Layout
 
@@ -25,15 +26,17 @@ const layoutStyle = {
 
 export default function CatalogPage() {
     return (
-        <Layout style={layoutStyle}>
-            <AppHeader></AppHeader>
-            <Layout>
-                <Sider width="25%" style={siderStyle}>
-                    Sider
-                </Sider>
-                <CatalogContent></CatalogContent>
+        <CatalogProvider>
+            <Layout style={layoutStyle}>
+                <AppHeader></AppHeader>
+                <Layout>
+                    <Sider width="25%" style={siderStyle}>
+                        Sider
+                    </Sider>
+                    <CatalogContent></CatalogContent>
+                </Layout>
+                <Footer style={footerStyle}>Footer</Footer>
             </Layout>
-            <Footer style={footerStyle}>Footer</Footer>
-        </Layout>
+        </CatalogProvider>
     )
 }

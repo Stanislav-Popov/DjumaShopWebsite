@@ -1,22 +1,18 @@
 /** @format */
 import styles from "./../styles/catalogProductsBlock.module.css"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import ProductList from "./ProductList/ProductList"
 import Pagination from "./Pagination/Pagination"
+import { CatalogContext } from "../context/CatalogContext"
 
-export default function CatalogProductsCard() {
+export default function CatalogProductsBlock() {
+    // Временная константа
     const PRODUCTSPERPAGE = 32
 
-    const [products, setProducts] = useState([])
+    const { products, sortType } = useContext(CatalogContext)
     const [currentPage, setCurrentPage] = useState(1)
 
-    // Требуются price, name, id, image
-    useEffect(() => {
-        fetch("/data.json")
-            .then((res) => res.json())
-            .then((data) => setProducts(data))
-            .catch((err) => console.log("Ошибка загрузки продуктов из json", err))
-    }, [])
+    useEffect(() => setCurrentPage(1), [sortType])
 
     const indexOfLast = currentPage * PRODUCTSPERPAGE
     const indexOfFirst = indexOfLast - PRODUCTSPERPAGE

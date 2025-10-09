@@ -4,349 +4,449 @@
         "name": "Футболка Oversize",
         "price": 2490,
         "image": "/images/placeholder.jpg",
-        "description": "Мягкий хлопок, свободный крой"
+        "description": "Мягкий хлопок, свободный крой",
+        "type": "футболка",
+        "date": "2024-01-15"
     },
     {
         "id": 2,
         "name": "Джинсы Slim Fit",
         "price": 4990,
         "image": "/images/placeholder.jpg",
-        "description": "Классические джинсы из плотного денима"
+        "description": "Классические джинсы из плотного денима",
+        "type": "джинсы",
+        "date": "2024-01-14"
     },
     {
         "id": 3,
         "name": "Худи с капюшоном",
         "price": 3990,
         "image": "/images/placeholder.jpg",
-        "description": "Теплый худи для повседневной носки"
+        "description": "Теплый худи для повседневной носки",
+        "type": "худи",
+        "date": "2025-01-13"
     },
     {
         "id": 4,
         "name": "Кроссовки Classic",
         "price": 5990,
         "image": "/images/placeholder.jpg",
-        "description": "Удобные кроссовки для города"
+        "description": "Удобные кроссовки для города",
+        "type": "кроссовки",
+        "date": "2024-01-12"
     },
     {
         "id": 5,
         "name": "Куртка ветровка",
         "price": 7990,
         "image": "/images/placeholder.jpg",
-        "description": "Защита от ветра и дождя"
+        "description": "Защита от ветра и дождя",
+        "type": "куртка",
+        "date": "2024-01-11"
     },
     {
         "id": 6,
         "name": "Свитшот Oversize",
         "price": 3490,
         "image": "/images/placeholder.jpg",
-        "description": "Мягкий и уютный свитшот"
+        "description": "Мягкий и уютный свитшот",
+        "type": "свитшот",
+        "date": "2024-01-10"
     },
     {
         "id": 7,
         "name": "Брюки карго",
         "price": 4590,
         "image": "/images/placeholder.jpg",
-        "description": "Функциональные брюки с карманами"
+        "description": "Функциональные брюки с карманами",
+        "type": "брюки",
+        "date": "2024-01-09"
     },
     {
         "id": 8,
         "name": "Рубашка Oxford",
         "price": 3290,
         "image": "/images/placeholder.jpg",
-        "description": "Классическая рубашка из оксфорда"
+        "description": "Классическая рубашка из оксфорда",
+        "type": "рубашка",
+        "date": "2024-01-08"
     },
     {
         "id": 9,
         "name": "Платье миди",
         "price": 4290,
         "image": "/images/placeholder.jpg",
-        "description": "Элегантное платье до колена"
+        "description": "Элегантное платье до колена",
+        "type": "платье",
+        "date": "2025-01-07"
     },
     {
         "id": 10,
         "name": "Кеды Canvas",
         "price": 2790,
         "image": "/images/placeholder.jpg",
-        "description": "Легкие кеды из хлопка"
+        "description": "Легкие кеды из хлопка",
+        "type": "кеды",
+        "date": "2024-01-06"
     },
     {
         "id": 11,
         "name": "Пальто шерстяное",
         "price": 8990,
         "image": "/images/placeholder.jpg",
-        "description": "Теплое пальто на осень-зиму"
+        "description": "Теплое пальто на осень-зиму",
+        "type": "пальто",
+        "date": "2024-01-05"
     },
     {
         "id": 12,
         "name": "Лонгслив Basic",
         "price": 1990,
         "image": "/images/placeholder.jpg",
-        "description": "Базовый лонгслив на каждый день"
+        "description": "Базовый лонгслив на каждый день",
+        "type": "лонгслив",
+        "date": "2024-01-04"
     },
     {
         "id": 13,
         "name": "Шорты джинсовые",
         "price": 2990,
         "image": "/images/placeholder.jpg",
-        "description": "Укороченные джинсы для лета"
+        "description": "Укороченные джинсы для лета",
+        "type": "шорты",
+        "date": "2024-01-03"
     },
     {
         "id": 14,
         "name": "Толстовка с принтом",
         "price": 3790,
         "image": "/images/placeholder.jpg",
-        "description": "Толстовка с уникальным дизайном"
+        "description": "Толстовка с уникальным дизайном",
+        "type": "толстовка",
+        "date": "2024-01-02"
     },
     {
         "id": 15,
         "name": "Бомбер",
         "price": 5490,
         "image": "/images/placeholder.jpg",
-        "description": "Стильная куртка-бомбер"
+        "description": "Стильная куртка-бомбер",
+        "type": "куртка",
+        "date": "2024-01-01"
     },
     {
         "id": 16,
         "name": "Юбка карандаш",
         "price": 3190,
         "image": "/images/placeholder.jpg",
-        "description": "Классическая юбка для офиса"
+        "description": "Классическая юбка для офиса",
+        "type": "юбка",
+        "date": "2023-12-31"
     },
     {
         "id": 17,
         "name": "Сланцы пляжные",
         "price": 990,
         "image": "/images/placeholder.jpg",
-        "description": "Легкие сланцы для отдыха"
+        "description": "Легкие сланцы для отдыха",
+        "type": "обувь",
+        "date": "2023-12-30"
     },
     {
         "id": 18,
         "name": "Кардиган вязаный",
         "price": 4690,
         "image": "/images/placeholder.jpg",
-        "description": "Уютный кардиган ручной вязки"
+        "description": "Уютный кардиган ручной вязки",
+        "type": "кардиган",
+        "date": "2023-12-29"
     },
     {
         "id": 19,
         "name": "Блейзер классический",
         "price": 6590,
         "image": "/images/placeholder.jpg",
-        "description": "Деловой блейзер для формальных мероприятий"
+        "description": "Деловой блейзер для формальных мероприятий",
+        "type": "блейзер",
+        "date": "2023-12-28"
     },
     {
         "id": 20,
         "name": "Футболка Polo",
         "price": 2890,
         "image": "/images/placeholder.jpg",
-        "description": "Полированная футболка с воротником"
+        "description": "Полированная футболка с воротником",
+        "type": "футболка",
+        "date": "2023-12-27"
     },
     {
         "id": 21,
         "name": "Леггинсы спортивные",
         "price": 2190,
         "image": "/images/placeholder.jpg",
-        "description": "Эластичные легинсы для тренировок"
+        "description": "Эластичные легинсы для тренировок",
+        "type": "леггинсы",
+        "date": "2023-12-26"
     },
     {
         "id": 22,
         "name": "Сапоги резиновые",
         "price": 3890,
         "image": "/images/placeholder.jpg",
-        "description": "Непромокаемые сапоги для дождливой погоды"
+        "description": "Непромокаемые сапоги для дождливой погоды",
+        "type": "сапоги",
+        "date": "2023-12-25"
     },
     {
         "id": 23,
         "name": "Жилет утепленный",
         "price": 5190,
         "image": "/images/placeholder.jpg",
-        "description": "Теплый жилет на синтепоне"
+        "description": "Теплый жилет на синтепоне",
+        "type": "жилет",
+        "date": "2023-12-24"
     },
     {
         "id": 24,
         "name": "Боди с кружевом",
         "price": 2590,
         "image": "/images/placeholder.jpg",
-        "description": "Женское боди с кружевными вставками"
+        "description": "Женское боди с кружевными вставками",
+        "type": "боди",
+        "date": "2023-12-23"
     },
     {
         "id": 25,
         "name": "Кроссовки беговые",
         "price": 7290,
         "image": "/images/placeholder.jpg",
-        "description": "Профессиональные кроссовки для бега"
+        "description": "Профессиональные кроссовки для бега",
+        "type": "кроссовки",
+        "date": "2023-12-22"
     },
     {
         "id": 26,
         "name": "Парка зимняя",
         "price": 12990,
         "image": "/images/placeholder.jpg",
-        "description": "Теплая парка для суровых зим"
+        "description": "Теплая парка для суровых зим",
+        "type": "куртка",
+        "date": "2023-12-21"
     },
     {
         "id": 27,
         "name": "Футболка с логотипом",
         "price": 1890,
         "image": "/images/placeholder.jpg",
-        "description": "Футболка с минималистичным лого"
+        "description": "Футболка с минималистичным лого",
+        "type": "футболка",
+        "date": "2023-12-20"
     },
     {
         "id": 28,
         "name": "Джинсы Boyfriend",
         "price": 4790,
         "image": "/images/placeholder.jpg",
-        "description": "Свободные джинсы boyfriend fit"
+        "description": "Свободные джинсы boyfriend fit",
+        "type": "джинсы",
+        "date": "2023-12-19"
     },
     {
         "id": 29,
         "name": "Туфли оксфорды",
         "price": 8590,
         "image": "/images/placeholder.jpg",
-        "description": "Классические туфли оксфорды"
+        "description": "Классические туфли оксфорды",
+        "type": "туфли",
+        "date": "2023-12-18"
     },
     {
         "id": 30,
         "name": "Куртка косуха",
         "price": 6990,
         "image": "/images/placeholder.jpg",
-        "description": "Стильная кожаная косуха"
+        "description": "Стильная кожаная косуха",
+        "type": "куртка",
+        "date": "2023-12-17"
     },
     {
         "id": 31,
         "name": "Платье-футляр",
         "price": 5290,
         "image": "/images/placeholder.jpg",
-        "description": "Элегантное платье-футляр для вечера"
+        "description": "Элегантное платье-футляр для вечера",
+        "type": "платье",
+        "date": "2023-12-16"
     },
     {
         "id": 32,
         "name": "Шапка вязаная",
         "price": 1490,
         "image": "/images/placeholder.jpg",
-        "description": "Теплая вязаная шапка"
+        "description": "Теплая вязаная шапка",
+        "type": "аксессуар",
+        "date": "2023-12-15"
     },
     {
         "id": 33,
         "name": "Рюкзак городской",
         "price": 3990,
         "image": "/images/placeholder.jpg",
-        "description": "Вместительный городской рюкзак"
+        "description": "Вместительный городской рюкзак",
+        "type": "аксессуар",
+        "date": "2023-12-14"
     },
     {
         "id": 34,
         "name": "Комбинезон джинсовый",
         "price": 5890,
         "image": "/images/placeholder.jpg",
-        "description": "Стильный джинсовый комбинезон"
+        "description": "Стильный джинсовый комбинезон",
+        "type": "комбинезон",
+        "date": "2023-12-13"
     },
     {
         "id": 35,
         "name": "Лоферы кожаные",
         "price": 6290,
         "image": "/images/placeholder.jpg",
-        "description": "Кожаные лоферы без шнуровки"
+        "description": "Кожаные лоферы без шнуровки",
+        "type": "обувь",
+        "date": "2023-12-12"
     },
     {
         "id": 36,
         "name": "Топ с открытой спиной",
         "price": 1790,
         "image": "/images/placeholder.jpg",
-        "description": "Сексуальный топ с открытой спиной"
+        "description": "Сексуальный топ с открытой спиной",
+        "type": "топ",
+        "date": "2023-12-11"
     },
     {
         "id": 37,
         "name": "Брюки широкие",
         "price": 3390,
         "image": "/images/placeholder.jpg",
-        "description": "Модные широкие брюки палаццо"
+        "description": "Модные широкие брюки палаццо",
+        "type": "брюки",
+        "date": "2023-12-10"
     },
     {
         "id": 38,
         "name": "Кепка бейсболка",
         "price": 1290,
         "image": "/images/placeholder.jpg",
-        "description": "Классическая бейсболка с козырьком"
+        "description": "Классическая бейсболка с козырьком",
+        "type": "аксессуар",
+        "date": "2023-12-09"
     },
     {
         "id": 39,
         "name": "Пиджак двойка",
         "price": 7590,
         "image": "/images/placeholder.jpg",
-        "description": "Пиджак от костюма-двойки"
+        "description": "Пиджак от костюма-двойки",
+        "type": "пиджак",
+        "date": "2023-12-08"
     },
     {
         "id": 40,
         "name": "Майка базовая",
         "price": 990,
         "image": "/images/placeholder.jpg",
-        "description": "Белая базовая майка"
+        "description": "Белая базовая майка",
+        "type": "майка",
+        "date": "2023-12-07"
     },
     {
         "id": 41,
         "name": "Сапоги на каблуке",
         "price": 7890,
         "image": "/images/placeholder.jpg",
-        "description": "Элегантные сапоги на каблуке"
+        "description": "Элегантные сапоги на каблуке",
+        "type": "сапоги",
+        "date": "2023-12-06"
     },
     {
         "id": 42,
         "name": "Ветровка легкая",
         "price": 4290,
         "image": "/images/placeholder.jpg",
-        "description": "Легкая ветровка для весны"
+        "description": "Легкая ветровка для весны",
+        "type": "куртка",
+        "date": "2023-12-05"
     },
     {
         "id": 43,
         "name": "Джемпер с V-образным вырезом",
         "price": 3690,
         "image": "/images/placeholder.jpg",
-        "description": "Теплый джемпер с глубоким вырезом"
+        "description": "Теплый джемпер с глубоким вырезом",
+        "type": "джемпер",
+        "date": "2023-12-04"
     },
     {
         "id": 44,
         "name": "Бермуды льняные",
         "price": 2890,
         "image": "/images/placeholder.jpg",
-        "description": "Легкие бермуды из льна"
+        "description": "Легкие бермуды из льна",
+        "type": "шорты",
+        "date": "2023-12-03"
     },
     {
         "id": 45,
         "name": "Ботильоны замшевые",
         "price": 6690,
         "image": "/images/placeholder.jpg",
-        "description": "Стильные замшевые ботильоны"
+        "description": "Стильные замшевые ботильоны",
+        "type": "ботильоны",
+        "date": "2023-12-02"
     },
     {
         "id": 46,
         "name": "Плащ тренч",
         "price": 8990,
         "image": "/images/placeholder.jpg",
-        "description": "Классический плащ тренчкот"
+        "description": "Классический плащ тренчкот",
+        "type": "плащ",
+        "date": "2023-12-01"
     },
     {
         "id": 47,
         "name": "Футболка с длинным рукавом",
         "price": 2390,
         "image": "/images/placeholder.jpg",
-        "description": "Футболка с длинными рукавами"
+        "description": "Футболка с длинными рукавами",
+        "type": "футболка",
+        "date": "2023-11-30"
     },
     {
         "id": 48,
         "name": "Юбка макси",
         "price": 3790,
         "image": "/images/placeholder.jpg",
-        "description": "Длинная юбка в пол"
+        "description": "Длинная юбка в пол",
+        "type": "юбка",
+        "date": "2023-11-29"
     },
     {
         "id": 49,
         "name": "Сандалии гладиаторы",
         "price": 3190,
         "image": "/images/placeholder.jpg",
-        "description": "Сандалии в стиле гладиаторов"
+        "description": "Сандалии в стиле гладиаторов",
+        "type": "сандалии",
+        "date": "2023-11-28"
     },
     {
         "id": 50,
         "name": "Пуховик ультралегкий",
         "price": 10990,
         "image": "/images/placeholder.jpg",
-        "description": "Легкий но теплый пуховик"
+        "description": "Легкий но теплый пуховик",
+        "type": "пуховик",
+        "date": "2023-11-27"
     }
 ]

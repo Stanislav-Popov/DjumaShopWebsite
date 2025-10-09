@@ -1,37 +1,11 @@
 /** @format */
+import { useContext } from "react"
 import styles from "../styles/catalogUnderHeader.module.css"
-import { Dropdown, Button, Space } from "antd"
-import { ArrowUpOutlined, ArrowDownOutlined, StarOutlined, DownOutlined } from "@ant-design/icons"
-
-const items = [
-    {
-        label: "Новое",
-        key: "1",
-        icon: <StarOutlined />,
-    },
-    {
-        label: "Дороже",
-        key: "2",
-        icon: <ArrowUpOutlined />,
-    },
-    {
-        label: "Дешевле",
-        key: "3",
-        icon: <ArrowDownOutlined />,
-    },
-]
-
-function handleMenuClick() {
-    console.log("handleMenuClick")
-}
-
-const menuProps = {
-    items,
-    onClick: handleMenuClick,
-}
+import SortDropdown from "./SortDropdown/SortDropdown"
+import { CatalogContext } from "../context/CatalogContext"
 
 export default function CatalogUnderHeader() {
-    const count = 10
+    const {count, sortType, setSortType} = useContext(CatalogContext)
 
     return (
         <div className={styles.underHeaderStyle}>
@@ -41,14 +15,7 @@ export default function CatalogUnderHeader() {
                 </p>
             </div>
             <div className={styles.sortBlock}>
-                <Dropdown menu={menuProps}>
-                    <Button style={{ width: "300px"}}>
-                        <Space>
-                            Button
-                            <DownOutlined />
-                        </Space>
-                    </Button>
-                </Dropdown>
+                <SortDropdown value={sortType} onChange={setSortType}/>
             </div>
         </div>
     )
