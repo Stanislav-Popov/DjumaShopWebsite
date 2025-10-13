@@ -5,8 +5,11 @@
         "price": 2490,
         "image": "/images/placeholder.jpg",
         "description": "Мягкий хлопок, свободный крой",
-        "type": "футболка",
-        "date": "2024-01-15"
+        "type": "Футболка",
+        "date": "2024-01-15",
+        "color": "Черный",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "Nike"
     },
     {
         "id": 2,
@@ -14,8 +17,11 @@
         "price": 4990,
         "image": "/images/placeholder.jpg",
         "description": "Классические джинсы из плотного денима",
-        "type": "джинсы",
-        "date": "2024-01-14"
+        "type": "Джинсы",
+        "date": "2024-01-14",
+        "color": "Синий",
+        "sizes": ["28", "30", "32", "34", "36"],
+        "brand": "Adidas"
     },
     {
         "id": 3,
@@ -23,8 +29,11 @@
         "price": 3990,
         "image": "/images/placeholder.jpg",
         "description": "Теплый худи для повседневной носки",
-        "type": "худи",
-        "date": "2025-01-13"
+        "type": "Худи",
+        "date": "2025-01-13",
+        "color": "Серый",
+        "sizes": ["M", "L", "XL", "XXL"],
+        "brand": "Puma"
     },
     {
         "id": 4,
@@ -32,8 +41,11 @@
         "price": 5990,
         "image": "/images/placeholder.jpg",
         "description": "Удобные кроссовки для города",
-        "type": "кроссовки",
-        "date": "2024-01-12"
+        "type": "Кроссовки",
+        "date": "2024-01-12",
+        "color": "Белый",
+        "sizes": ["38", "39", "40", "41", "42", "43"],
+        "brand": "Reebok"
     },
     {
         "id": 5,
@@ -41,8 +53,11 @@
         "price": 7990,
         "image": "/images/placeholder.jpg",
         "description": "Защита от ветра и дождя",
-        "type": "куртка",
-        "date": "2024-01-11"
+        "type": "Куртка",
+        "date": "2024-01-11",
+        "color": "Зеленый",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "The North Face"
     },
     {
         "id": 6,
@@ -50,8 +65,11 @@
         "price": 3490,
         "image": "/images/placeholder.jpg",
         "description": "Мягкий и уютный свитшот",
-        "type": "свитшот",
-        "date": "2024-01-10"
+        "type": "Свитшот",
+        "date": "2024-01-10",
+        "color": "Розовый",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "Under Armour"
     },
     {
         "id": 7,
@@ -59,8 +77,11 @@
         "price": 4590,
         "image": "/images/placeholder.jpg",
         "description": "Функциональные брюки с карманами",
-        "type": "брюки",
-        "date": "2024-01-09"
+        "type": "Брюки",
+        "date": "2024-01-09",
+        "color": "Хаки",
+        "sizes": ["46", "48", "50", "52", "54"],
+        "brand": "Columbia"
     },
     {
         "id": 8,
@@ -68,8 +89,11 @@
         "price": 3290,
         "image": "/images/placeholder.jpg",
         "description": "Классическая рубашка из оксфорда",
-        "type": "рубашка",
-        "date": "2024-01-08"
+        "type": "Рубашка",
+        "date": "2024-01-08",
+        "color": "Белый",
+        "sizes": ["38", "40", "42", "44", "46"],
+        "brand": "Lacoste"
     },
     {
         "id": 9,
@@ -77,8 +101,11 @@
         "price": 4290,
         "image": "/images/placeholder.jpg",
         "description": "Элегантное платье до колена",
-        "type": "платье",
-        "date": "2025-01-07"
+        "type": "Платье",
+        "date": "2025-01-07",
+        "color": "Красный",
+        "sizes": [ "S", "M", "L"],
+        "brand": "New Balance"
     },
     {
         "id": 10,
@@ -86,8 +113,11 @@
         "price": 2790,
         "image": "/images/placeholder.jpg",
         "description": "Легкие кеды из хлопка",
-        "type": "кеды",
-        "date": "2024-01-06"
+        "type": "Кеды",
+        "date": "2024-01-06",
+        "color": "Черный",
+        "sizes": ["36", "37", "38", "39", "40", "41"],
+        "brand": "Converse"
     },
     {
         "id": 11,
@@ -95,8 +125,11 @@
         "price": 8990,
         "image": "/images/placeholder.jpg",
         "description": "Теплое пальто на осень-зиму",
-        "type": "пальто",
-        "date": "2024-01-05"
+        "type": "Пальто",
+        "date": "2024-01-05",
+        "color": "Бежевый",
+        "sizes": ["42", "44", "46", "48", "50"],
+        "brand": "The North Face"
     },
     {
         "id": 12,
@@ -104,8 +137,11 @@
         "price": 1990,
         "image": "/images/placeholder.jpg",
         "description": "Базовый лонгслив на каждый день",
-        "type": "лонгслив",
-        "date": "2024-01-04"
+        "type": "Лонгслив",
+        "date": "2024-01-04",
+        "color": "Белый",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "Nike"
     },
     {
         "id": 13,
@@ -113,8 +149,11 @@
         "price": 2990,
         "image": "/images/placeholder.jpg",
         "description": "Укороченные джинсы для лета",
-        "type": "шорты",
-        "date": "2024-01-03"
+        "type": "Шорты",
+        "date": "2024-01-03",
+        "color": "Синий",
+        "sizes": ["28", "30", "32", "34", "36"],
+        "brand": "Adidas"
     },
     {
         "id": 14,
@@ -122,8 +161,11 @@
         "price": 3790,
         "image": "/images/placeholder.jpg",
         "description": "Толстовка с уникальным дизайном",
-        "type": "толстовка",
-        "date": "2024-01-02"
+        "type": "Толстовка",
+        "date": "2024-01-02",
+        "color": "Желтый",
+        "sizes": ["M", "L", "XL", "XXL"],
+        "brand": "Puma"
     },
     {
         "id": 15,
@@ -131,8 +173,11 @@
         "price": 5490,
         "image": "/images/placeholder.jpg",
         "description": "Стильная куртка-бомбер",
-        "type": "куртка",
-        "date": "2024-01-01"
+        "type": "Куртка",
+        "date": "2024-01-01",
+        "color": "Черный",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "Reebok"
     },
     {
         "id": 16,
@@ -140,8 +185,11 @@
         "price": 3190,
         "image": "/images/placeholder.jpg",
         "description": "Классическая юбка для офиса",
-        "type": "юбка",
-        "date": "2023-12-31"
+        "type": "Юбка",
+        "date": "2023-12-31",
+        "color": "Темно-синий",
+        "sizes": ["40", "42", "44", "46", "48"],
+        "brand": "Under Armour"
     },
     {
         "id": 17,
@@ -149,8 +197,11 @@
         "price": 990,
         "image": "/images/placeholder.jpg",
         "description": "Легкие сланцы для отдыха",
-        "type": "обувь",
-        "date": "2023-12-30"
+        "type": "Обувь",
+        "date": "2023-12-30",
+        "color": "Синий",
+        "sizes": ["39", "40", "41", "42", "43", "44"],
+        "brand": "Columbia"
     },
     {
         "id": 18,
@@ -158,8 +209,11 @@
         "price": 4690,
         "image": "/images/placeholder.jpg",
         "description": "Уютный кардиган ручной вязки",
-        "type": "кардиган",
-        "date": "2023-12-29"
+        "type": "Кардиган",
+        "date": "2023-12-29",
+        "color": "Коричневый",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "Lacoste"
     },
     {
         "id": 19,
@@ -167,8 +221,11 @@
         "price": 6590,
         "image": "/images/placeholder.jpg",
         "description": "Деловой блейзер для формальных мероприятий",
-        "type": "блейзер",
-        "date": "2023-12-28"
+        "type": "Блейзер",
+        "date": "2023-12-28",
+        "color": "Черный",
+        "sizes": ["46", "48", "50", "52", "54"],
+        "brand": "New Balance"
     },
     {
         "id": 20,
@@ -176,8 +233,11 @@
         "price": 2890,
         "image": "/images/placeholder.jpg",
         "description": "Полированная футболка с воротником",
-        "type": "футболка",
-        "date": "2023-12-27"
+        "type": "Футболка",
+        "date": "2023-12-27",
+        "color": "Темно-синий",
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "brand": "Converse"
     },
     {
         "id": 21,
@@ -185,8 +245,11 @@
         "price": 2190,
         "image": "/images/placeholder.jpg",
         "description": "Эластичные легинсы для тренировок",
-        "type": "леггинсы",
-        "date": "2023-12-26"
+        "type": "Леггинсы",
+        "date": "2023-12-26",
+        "color": "Черный",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "Nike"
     },
     {
         "id": 22,
@@ -194,8 +257,11 @@
         "price": 3890,
         "image": "/images/placeholder.jpg",
         "description": "Непромокаемые сапоги для дождливой погоды",
-        "type": "сапоги",
-        "date": "2023-12-25"
+        "type": "Сапоги",
+        "date": "2023-12-25",
+        "color": "Черный",
+        "sizes": ["37", "38", "39", "40", "41", "42"],
+        "brand": "Adidas"
     },
     {
         "id": 23,
@@ -203,8 +269,11 @@
         "price": 5190,
         "image": "/images/placeholder.jpg",
         "description": "Теплый жилет на синтепоне",
-        "type": "жилет",
-        "date": "2023-12-24"
+        "type": "Жилет",
+        "date": "2023-12-24",
+        "color": "Серый",
+        "sizes": ["M", "L", "XL", "XXL"],
+        "brand": "Puma"
     },
     {
         "id": 24,
@@ -212,8 +281,11 @@
         "price": 2590,
         "image": "/images/placeholder.jpg",
         "description": "Женское боди с кружевными вставками",
-        "type": "боди",
-        "date": "2023-12-23"
+        "type": "Боди",
+        "date": "2023-12-23",
+        "color": "Белый",
+        "sizes": [ "S", "M", "L"],
+        "brand": "Reebok"
     },
     {
         "id": 25,
@@ -221,8 +293,11 @@
         "price": 7290,
         "image": "/images/placeholder.jpg",
         "description": "Профессиональные кроссовки для бега",
-        "type": "кроссовки",
-        "date": "2023-12-22"
+        "type": "Кроссовки",
+        "date": "2023-12-22",
+        "color": "Синий",
+        "sizes": ["39", "40", "41", "42", "43", "44", "45"],
+        "brand": "The North Face"
     },
     {
         "id": 26,
@@ -230,8 +305,11 @@
         "price": 12990,
         "image": "/images/placeholder.jpg",
         "description": "Теплая парка для суровых зим",
-        "type": "куртка",
-        "date": "2023-12-21"
+        "type": "Куртка",
+        "date": "2023-12-21",
+        "color": "Зеленый",
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "brand": "Under Armour"
     },
     {
         "id": 27,
@@ -239,8 +317,11 @@
         "price": 1890,
         "image": "/images/placeholder.jpg",
         "description": "Футболка с минималистичным лого",
-        "type": "футболка",
-        "date": "2023-12-20"
+        "type": "Футболка",
+        "date": "2023-12-20",
+        "color": "Белый",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "Columbia"
     },
     {
         "id": 28,
@@ -248,8 +329,11 @@
         "price": 4790,
         "image": "/images/placeholder.jpg",
         "description": "Свободные джинсы boyfriend fit",
-        "type": "джинсы",
-        "date": "2023-12-19"
+        "type": "Джинсы",
+        "date": "2023-12-19",
+        "color": "Голубой",
+        "sizes": ["26", "28", "30", "32", "34"],
+        "brand": "Lacoste"
     },
     {
         "id": 29,
@@ -257,8 +341,11 @@
         "price": 8590,
         "image": "/images/placeholder.jpg",
         "description": "Классические туфли оксфорды",
-        "type": "туфли",
-        "date": "2023-12-18"
+        "type": "Туфли",
+        "date": "2023-12-18",
+        "color": "Коричневый",
+        "sizes": ["40", "41", "42", "43", "44"],
+        "brand": "New Balance"
     },
     {
         "id": 30,
@@ -266,8 +353,11 @@
         "price": 6990,
         "image": "/images/placeholder.jpg",
         "description": "Стильная кожаная косуха",
-        "type": "куртка",
-        "date": "2023-12-17"
+        "type": "Куртка",
+        "date": "2023-12-17",
+        "color": "Черный",
+        "sizes": ["46", "48", "50", "52"],
+        "brand": "Converse"
     },
     {
         "id": 31,
@@ -275,8 +365,11 @@
         "price": 5290,
         "image": "/images/placeholder.jpg",
         "description": "Элегантное платье-футляр для вечера",
-        "type": "платье",
-        "date": "2023-12-16"
+        "type": "Платье",
+        "date": "2023-12-16",
+        "color": "Черный",
+        "sizes": ["42", "44", "46", "48"],
+        "brand": "Nike"
     },
     {
         "id": 32,
@@ -284,8 +377,11 @@
         "price": 1490,
         "image": "/images/placeholder.jpg",
         "description": "Теплая вязаная шапка",
-        "type": "аксессуар",
-        "date": "2023-12-15"
+        "type": "Аксессуар",
+        "date": "2023-12-15",
+        "color": "Серый",
+        "sizes": ["One Size"],
+        "brand": "Adidas"
     },
     {
         "id": 33,
@@ -293,8 +389,11 @@
         "price": 3990,
         "image": "/images/placeholder.jpg",
         "description": "Вместительный городской рюкзак",
-        "type": "аксессуар",
-        "date": "2023-12-14"
+        "type": "Аксессуар",
+        "date": "2023-12-14",
+        "color": "Черный",
+        "sizes": ["One Size"],
+        "brand": "Puma"
     },
     {
         "id": 34,
@@ -302,8 +401,11 @@
         "price": 5890,
         "image": "/images/placeholder.jpg",
         "description": "Стильный джинсовый комбинезон",
-        "type": "комбинезон",
-        "date": "2023-12-13"
+        "type": "Комбинезон",
+        "date": "2023-12-13",
+        "color": "Синий",
+        "sizes": ["40", "42", "44", "46", "48"],
+        "brand": "Reebok"
     },
     {
         "id": 35,
@@ -311,8 +413,11 @@
         "price": 6290,
         "image": "/images/placeholder.jpg",
         "description": "Кожаные лоферы без шнуровки",
-        "type": "обувь",
-        "date": "2023-12-12"
+        "type": "Обувь",
+        "date": "2023-12-12",
+        "color": "Черный",
+        "sizes": ["38", "39", "40", "41", "42"],
+        "brand": "The North Face"
     },
     {
         "id": 36,
@@ -320,8 +425,11 @@
         "price": 1790,
         "image": "/images/placeholder.jpg",
         "description": "Сексуальный топ с открытой спиной",
-        "type": "топ",
-        "date": "2023-12-11"
+        "type": "Топ",
+        "date": "2023-12-11",
+        "color": "Красный",
+        "sizes": [ "S", "M", "L"],
+        "brand": "Under Armour"
     },
     {
         "id": 37,
@@ -329,8 +437,11 @@
         "price": 3390,
         "image": "/images/placeholder.jpg",
         "description": "Модные широкие брюки палаццо",
-        "type": "брюки",
-        "date": "2023-12-10"
+        "type": "Брюки",
+        "date": "2023-12-10",
+        "color": "Белый",
+        "sizes": ["42", "44", "46", "48", "50"],
+        "brand": "Columbia"
     },
     {
         "id": 38,
@@ -338,8 +449,11 @@
         "price": 1290,
         "image": "/images/placeholder.jpg",
         "description": "Классическая бейсболка с козырьком",
-        "type": "аксессуар",
-        "date": "2023-12-09"
+        "type": "Аксессуар",
+        "date": "2023-12-09",
+        "color": "Черный",
+        "sizes": ["One Size"],
+        "brand": "Lacoste"
     },
     {
         "id": 39,
@@ -347,8 +461,11 @@
         "price": 7590,
         "image": "/images/placeholder.jpg",
         "description": "Пиджак от костюма-двойки",
-        "type": "пиджак",
-        "date": "2023-12-08"
+        "type": "Пиджак",
+        "date": "2023-12-08",
+        "color": "Темно-синий",
+        "sizes": ["46", "48", "50", "52", "54"],
+        "brand": "New Balance"
     },
     {
         "id": 40,
@@ -356,8 +473,11 @@
         "price": 990,
         "image": "/images/placeholder.jpg",
         "description": "Белая базовая майка",
-        "type": "майка",
-        "date": "2023-12-07"
+        "type": "Майка",
+        "date": "2023-12-07",
+        "color": "Белый",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "Converse"
     },
     {
         "id": 41,
@@ -365,8 +485,11 @@
         "price": 7890,
         "image": "/images/placeholder.jpg",
         "description": "Элегантные сапоги на каблуке",
-        "type": "сапоги",
-        "date": "2023-12-06"
+        "type": "Сапоги",
+        "date": "2023-12-06",
+        "color": "Черный",
+        "sizes": ["36", "37", "38", "39"],
+        "brand": "Nike"
     },
     {
         "id": 42,
@@ -374,8 +497,11 @@
         "price": 4290,
         "image": "/images/placeholder.jpg",
         "description": "Легкая ветровка для весны",
-        "type": "куртка",
-        "date": "2023-12-05"
+        "type": "Куртка",
+        "date": "2023-12-05",
+        "color": "Желтый",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "Adidas"
     },
     {
         "id": 43,
@@ -383,8 +509,11 @@
         "price": 3690,
         "image": "/images/placeholder.jpg",
         "description": "Теплый джемпер с глубоким вырезом",
-        "type": "джемпер",
-        "date": "2023-12-04"
+        "type": "Джемпер",
+        "date": "2023-12-04",
+        "color": "Зеленый",
+        "sizes": ["M", "L", "XL", "XXL"],
+        "brand": "Puma"
     },
     {
         "id": 44,
@@ -392,8 +521,11 @@
         "price": 2890,
         "image": "/images/placeholder.jpg",
         "description": "Легкие бермуды из льна",
-        "type": "шорты",
-        "date": "2023-12-03"
+        "type": "Шорты",
+        "date": "2023-12-03",
+        "color": "Бежевый",
+        "sizes": ["46", "48", "50", "52", "54"],
+        "brand": "Reebok"
     },
     {
         "id": 45,
@@ -401,8 +533,11 @@
         "price": 6690,
         "image": "/images/placeholder.jpg",
         "description": "Стильные замшевые ботильоны",
-        "type": "ботильоны",
-        "date": "2023-12-02"
+        "type": "Ботильоны",
+        "date": "2023-12-02",
+        "color": "Коричневый",
+        "sizes": ["36", "37", "38", "39", "40"],
+        "brand": "The North Face"
     },
     {
         "id": 46,
@@ -410,8 +545,11 @@
         "price": 8990,
         "image": "/images/placeholder.jpg",
         "description": "Классический плащ тренчкот",
-        "type": "плащ",
-        "date": "2023-12-01"
+        "type": "Плащ",
+        "date": "2023-12-01",
+        "color": "Бежевый",
+        "sizes": ["42", "44", "46", "48", "50"],
+        "brand": "Under Armour"
     },
     {
         "id": 47,
@@ -419,8 +557,11 @@
         "price": 2390,
         "image": "/images/placeholder.jpg",
         "description": "Футболка с длинными рукавами",
-        "type": "футболка",
-        "date": "2023-11-30"
+        "type": "Футболка",
+        "date": "2023-11-30",
+        "color": "Серый",
+        "sizes": ["S", "M", "L", "XL"],
+        "brand": "Columbia"
     },
     {
         "id": 48,
@@ -428,8 +569,11 @@
         "price": 3790,
         "image": "/images/placeholder.jpg",
         "description": "Длинная юбка в пол",
-        "type": "юбка",
-        "date": "2023-11-29"
+        "type": "Юбка",
+        "date": "2023-11-29",
+        "color": "Черный",
+        "sizes": ["40", "42", "44", "46", "48"],
+        "brand": "Lacoste"
     },
     {
         "id": 49,
@@ -437,8 +581,11 @@
         "price": 3190,
         "image": "/images/placeholder.jpg",
         "description": "Сандалии в стиле гладиаторов",
-        "type": "сандалии",
-        "date": "2023-11-28"
+        "type": "Сандалии",
+        "date": "2023-11-28",
+        "color": "Коричневый",
+        "sizes": ["36", "37", "38", "39", "40"],
+        "brand": "New Balance"
     },
     {
         "id": 50,
@@ -446,7 +593,10 @@
         "price": 10990,
         "image": "/images/placeholder.jpg",
         "description": "Легкий но теплый пуховик",
-        "type": "пуховик",
-        "date": "2023-11-27"
+        "type": "Пуховик",
+        "date": "2023-11-27",
+        "color": "Черный",
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "brand": "Converse"
     }
 ]

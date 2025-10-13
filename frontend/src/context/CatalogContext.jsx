@@ -8,12 +8,20 @@ export function CatalogProvider({ children }) {
     const [products, setProducts] = useState([])
     const [sortType, setSortType] = useState("new")
     const [filters, setFilters] = useState({})
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
+        setIsLoading(true)
         fetch("/data.json")
             .then((res) => res.json())
-            .then((data) => setProducts(data))
-            .catch((err) => console.log("Ошибка загрузки продуктов", err))
+            .then((data) => {
+                setProducts(data)
+                setIsLoading(false)
+            })
+            .catch((err) => {
+                console.log("Ошибка загрузки продуктов", err)
+                setIsLoading(false)
+            })
     }, [])
 
     const sortedProducts = useMemo(() => {
@@ -46,6 +54,7 @@ export function CatalogProvider({ children }) {
                 setSortType,
                 filters,
                 setFilters,
+                isLoading
             }}>
             {children}
         </CatalogContext.Provider>
