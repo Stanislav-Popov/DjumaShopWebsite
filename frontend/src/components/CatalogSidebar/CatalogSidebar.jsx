@@ -36,7 +36,7 @@ function generateFiltersData(products, allSizes) {
 }
 
 export default function CatalogSidebar() {
-    const { allProducts, isLoading, allSizes, setFilters } = useContext(CatalogContext)
+    const { allProducts, isLoading, allSizes, setFilters, setCurrentPage } = useContext(CatalogContext)
     const [brandSearch, setBrandSearch] = useState("")
     const [resetKey, setResetKey] = useState(0)
     const [localFilters, setLocalFilters] = useState({
@@ -85,6 +85,7 @@ export default function CatalogSidebar() {
     // Нажатие кнопки "Применить": передаём локальные фильтры в контекст
     const handleApply = () => {
         setFilters(localFilters)
+        setCurrentPage(1)
         window.scrollTo({ top: 0, behavior: "smooth" })
     }
 
@@ -101,6 +102,7 @@ export default function CatalogSidebar() {
         setFilters(resetState)
         setBrandSearch("")
         setResetKey((prev) => prev + 1)
+        setCurrentPage(1)
         window.scrollTo({ top: 0, behavior: "smooth" })
     }
 

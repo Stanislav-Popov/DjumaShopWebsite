@@ -4,11 +4,13 @@ import { createContext, useState, useEffect, useMemo } from "react"
 
 export const CatalogContext = createContext()
 const ALL_SIZES = ["XS", "S", "M", "L", "XL", "XXL"]
+const PRODUCTSPERPAGE = 32
 
 export function CatalogProvider({ children }) {
     const [allProducts, setAllProducts] = useState([])
     const [sortType, setSortType] = useState("new")
     const [isLoading, setIsLoading] = useState(true)
+    const [currentPage, setCurrentPage] = useState(1)
     const [filters, setFilters] = useState({
         brands: [],
         types: [],
@@ -89,6 +91,9 @@ export function CatalogProvider({ children }) {
                 setFilters,
                 isLoading,
                 allSizes: ALL_SIZES,
+                currentPage,
+                setCurrentPage,
+                productsPerPage: PRODUCTSPERPAGE
             }}>
             {children}
         </CatalogContext.Provider>

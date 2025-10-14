@@ -6,18 +6,14 @@ import Pagination from "./Pagination/Pagination"
 import { CatalogContext } from "../context/CatalogContext"
 
 export default function CatalogProductsBlock() {
-    // Временная константа
-    const PRODUCTSPERPAGE = 32
-
-    const { products, sortType } = useContext(CatalogContext)
-    const [currentPage, setCurrentPage] = useState(1)
+    const { products, sortType, currentPage, setCurrentPage, productsPerPage } = useContext(CatalogContext)
 
     useEffect(() => setCurrentPage(1), [sortType])
 
-    const indexOfLast = currentPage * PRODUCTSPERPAGE
-    const indexOfFirst = indexOfLast - PRODUCTSPERPAGE
+    const indexOfLast = currentPage * productsPerPage
+    const indexOfFirst = indexOfLast - productsPerPage
     const currentProducts = products.slice(indexOfFirst, indexOfLast)
-    const totalPages = Math.ceil(products.length / PRODUCTSPERPAGE)
+    const totalPages = Math.ceil(products.length / productsPerPage)
 
     return (
         <div className={styles.catalogWrapper}>
