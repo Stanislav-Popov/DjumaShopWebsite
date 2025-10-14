@@ -1,36 +1,23 @@
 /** @format */
-/* Доработать:
-router
-динамическое изменение меню
-мобильная версия
-архитектуру навигации
-*/
 
-import { Layout, Input } from "antd"
 import styles from "../styles/AppHeader.module.css"
+import SearchInput from "./SearchInput/SearchInput"
 
-const { Search } = Input
-const { Header } = Layout
-
-function onSearch(value) {
+function handleSearch(value) {
     console.log(value)
 }
 
 export default function AppHeader() {
     return (
-        <Header className={styles.headerStyle}>
+        <header className={styles.headerStyle}>
             <div className={styles.logoSearchBlock}>
                 <a className={styles.logo} href="">
                     DjumaShop
                 </a>
 
-                <Search
-                    placeholder="Поиск..."
-                    allowClear
-                    onSearch={(value) => onSearch(value)}
-                    className={styles.searchStyle}
-                    size="large"
-                />
+                <div className={styles.searchWrapper}>
+                    <SearchInput placeholder="Поиск товаров..." onSearch={handleSearch} height="40px"/>
+                </div>
             </div>
 
             <nav className={styles.navButtonsBlock}>
@@ -44,6 +31,6 @@ export default function AppHeader() {
                     О нас
                 </a>
             </nav>
-        </Header>
+        </header>
     )
 }

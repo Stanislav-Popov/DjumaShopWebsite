@@ -1,6 +1,7 @@
+/** @format */
+
 .searchBox {
     position: relative;
-    margin-bottom: 10px;
 }
 
 .searchInput {
@@ -14,13 +15,13 @@
     transition: border-color 0.2s ease;
 }
 
-.searchInput:focus{
+.searchInput:focus {
     border-color: #b5b5b5;
 }
 
 .clearButton {
     position: absolute;
-    right: 8px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     background: none;
@@ -36,6 +37,27 @@
     transition: color 0.2s ease;
 }
 
-.clearButton:hover{
-    color: #000
+.clearButton:hover {
+    color: #000;
+}
+
+.searchButton {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: color 0.2s ease;
+    outline: none;
+}
+
+.searchButton:hover {
+    color: #b5b5b5;
 }

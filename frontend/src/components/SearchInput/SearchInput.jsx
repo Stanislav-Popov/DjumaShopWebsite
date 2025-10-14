@@ -2,9 +2,9 @@
 
 import { useState } from "react"
 import styles from "./searchInput.module.css"
-import { CloseOutlined } from "@ant-design/icons"
+import { CloseOutlined, SearchOutlined } from "@ant-design/icons"
 
-export default function SearchInput({ placeholder = "Поиск...", onSearch }) {
+export default function SearchInput({ placeholder = "Поиск...", onSearch, height="32px" }) {
     const [value, setValue] = useState("")
 
     const handleChange = (e) => {
@@ -18,6 +18,10 @@ export default function SearchInput({ placeholder = "Поиск...", onSearch })
         onSearch("")
     }
 
+    const handleSearchClick = () => {
+        onSearch(value)
+    }
+
     return (
         <div className={styles.searchBox}>
             <input
@@ -26,6 +30,7 @@ export default function SearchInput({ placeholder = "Поиск...", onSearch })
                 value={value}
                 onChange={handleChange}
                 className={styles.searchInput}
+                style={{height: height}}
             />
 
             {value && (
@@ -33,6 +38,13 @@ export default function SearchInput({ placeholder = "Поиск...", onSearch })
                     <CloseOutlined className={styles.clearIcon} />
                 </button>
             )}
+
+            <button
+                className={styles.searchButton}
+                onClick={handleSearchClick}
+            >
+                <SearchOutlined className={styles.searchIcon}></SearchOutlined>
+            </button>
         </div>
     )
 }

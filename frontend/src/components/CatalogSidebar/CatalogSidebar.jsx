@@ -184,9 +184,11 @@ export default function CatalogSidebar() {
                     })}
                 </ul>
             </FilterSection>
-            
-            <FilterSection title="Брэнд" resetKey={resetKey}>
-                <SearchInput key={resetKey} placeholder="Поиск брэнда ..." onSearch={setBrandSearch} />
+
+            <FilterSection title="Бренд" resetKey={resetKey}>
+                <div className={styles.searchInputBox}>
+                    <SearchInput key={resetKey} placeholder="Поиск бренда ..." onSearch={setBrandSearch} />
+                </div>
                 <ul className={styles.checkboxList}>
                     {displayBrands.map((brand) => {
                         const isSelected = localFilters.brands.includes(brand)
