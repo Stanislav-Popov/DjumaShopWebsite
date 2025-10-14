@@ -116,31 +116,48 @@ export default function CatalogSidebar() {
 
     return (
         <aside className={styles.sidebar}>
-            <FilterSection title="Брэнд" defaultOpen resetKey={resetKey}>
-                <SearchInput key={resetKey} placeholder="Поиск брэнда ..." onSearch={setBrandSearch} />
-                <ul className={styles.checkboxList}>
-                    {displayBrands.map((brand) => {
-                        const isSelected = localFilters.brands.includes(brand)
-                        const isHiddenBySearch = !searchedBrands.includes(brand)
+            <FilterSection title="Цена" resetKey={resetKey} defaultOpen>
+                <div className={styles.priceInputs}>
+                    <label className={styles.priceLabel}>
+                        От
+                        <input
+                            type="number"
+                            min="0"
+                            value={localFilters.price.min ?? ""}
+                            onChange={(e) => {
+                                setLocalFilters((prev) => ({
+                                    ...prev,
+                                    price: {
+                                        ...prev.price,
+                                        min: e.target.value ? Number(e.target.value) : null,
+                                    },
+                                }))
+                            }}
+                            className={styles.priceInput}
+                            placeholder="0"
+                        />
+                    </label>
 
-                        return (
-                            <li key={brand}>
-                                <label
-                                    className={`${styles.checkboxLabel} ${
-                                        isHiddenBySearch ? styles.hiddenItem : ""
-                                    }`}>
-                                    <input
-                                        type="checkbox"
-                                        checked={isSelected}
-                                        onChange={(e) => toggleFilter("brands", brand, e.target.checked)}
-                                    />
-                                    <span>{brand}</span>
-                                </label>
-                            </li>
-                        )
-                    })}
-                    {searchedBrands.length === 0 && <li className={styles.noResult}>Ничего не найдено</li>}
-                </ul>
+                    <label className={styles.priceLabel}>
+                        До
+                        <input
+                            type="number"
+                            min="0"
+                            value={localFilters.price.max ?? ""}
+                            onChange={(e) => {
+                                setLocalFilters((prev) => ({
+                                    ...prev,
+                                    price: {
+                                        ...prev.price,
+                                        max: e.target.value ? Number(e.target.value) : null,
+                                    },
+                                }))
+                            }}
+                            className={styles.priceInput}
+                            placeholder="∞"
+                        />
+                    </label>
+                </div>
             </FilterSection>
 
             <FilterSection title="Размер" resetKey={resetKey}>
@@ -165,6 +182,33 @@ export default function CatalogSidebar() {
                             </li>
                         )
                     })}
+                </ul>
+            </FilterSection>
+            
+            <FilterSection title="Брэнд" resetKey={resetKey}>
+                <SearchInput key={resetKey} placeholder="Поиск брэнда ..." onSearch={setBrandSearch} />
+                <ul className={styles.checkboxList}>
+                    {displayBrands.map((brand) => {
+                        const isSelected = localFilters.brands.includes(brand)
+                        const isHiddenBySearch = !searchedBrands.includes(brand)
+
+                        return (
+                            <li key={brand}>
+                                <label
+                                    className={`${styles.checkboxLabel} ${
+                                        isHiddenBySearch ? styles.hiddenItem : ""
+                                    }`}>
+                                    <input
+                                        type="checkbox"
+                                        checked={isSelected}
+                                        onChange={(e) => toggleFilter("brands", brand, e.target.checked)}
+                                    />
+                                    <span>{brand}</span>
+                                </label>
+                            </li>
+                        )
+                    })}
+                    {searchedBrands.length === 0 && <li className={styles.noResult}>Ничего не найдено</li>}
                 </ul>
             </FilterSection>
 
