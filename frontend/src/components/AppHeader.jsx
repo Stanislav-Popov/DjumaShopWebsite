@@ -2,34 +2,35 @@
 
 import styles from "../styles/AppHeader.module.css"
 import SearchInput from "./SearchInput/SearchInput"
-
-function handleSearch(value) {
-    console.log(value)
-}
+import { NavLink } from "react-router-dom"
 
 export default function AppHeader() {
+    function handleSearch(value) {
+        console.log(value)
+    }
+
     return (
         <header className={styles.headerStyle}>
             <div className={styles.logoSearchBlock}>
-                <a className={styles.logo} href="">
+                <NavLink className={styles.logo} to="/">
                     DjumaShop
-                </a>
+                </NavLink>
 
                 <div className={styles.searchWrapper}>
-                    <SearchInput placeholder="Поиск товаров..." onSearch={handleSearch} height="40px"/>
+                    <SearchInput placeholder="Поиск товаров..." onSearch={handleSearch} height="40px" />
                 </div>
             </div>
 
             <nav className={styles.navButtonsBlock}>
-                <a className={styles.navButton} href="">
+                <NavLink className={styles.navButton} to="/">
                     Главная
-                </a>
-                <a className={styles.navButton + " " + styles.active} href="">
+                </NavLink>
+                <NavLink className={styles.navButton + " " + styles.active} to="/catalog">
                     Каталог
-                </a>
-                <a className={styles.navButton} href="">
+                </NavLink>
+                <NavLink className={styles.navButton} to="/about">
                     О нас
-                </a>
+                </NavLink>
             </nav>
         </header>
     )

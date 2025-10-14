@@ -6,7 +6,7 @@ export default function ProductList({ currentProducts }) {
     return (
         <div className={styles.container}>
             {currentProducts.map((p) => (
-                <CatalogProductCard key={p.id} product={p} />
+                <CatalogProductCard key={p.id} product={p}/>
             ))}
         </div>
     )

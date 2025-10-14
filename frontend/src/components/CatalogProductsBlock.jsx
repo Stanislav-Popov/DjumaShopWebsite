@@ -1,6 +1,6 @@
 /** @format */
 import styles from "./../styles/catalogProductsBlock.module.css"
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect } from "react"
 import ProductList from "./ProductList/ProductList"
 import Pagination from "./Pagination/Pagination"
 import { CatalogContext } from "../context/CatalogContext"
@@ -21,7 +21,7 @@ export default function CatalogProductsBlock() {
             <Pagination
                 currentPage={currentPage}
                 totalPages={totalPages}
-                setCurrentPage={setCurrentPage}></Pagination>
+                setCurrentPage={setCurrentPage} />
         </div>
     )
 }
