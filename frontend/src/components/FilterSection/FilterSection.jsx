@@ -4,20 +4,20 @@ import { useState, useRef, useEffect } from "react"
 import styles from "./filterSection.module.css"
 import { DownOutlined } from "@ant-design/icons"
 
-export default function FilterSection({ title, children, defaultOpen = false }) {
+export default function FilterSection({ title, children, defaultOpen = false, resetKey }) {
     const [open, setOpen] = useState(defaultOpen)
     const [height, setHeight] = useState("0px")
     const contentRef = useRef(null)
 
     useEffect(() => {
         if (contentRef.current) {
-            if (open) {
-                setHeight(`${contentRef.current.scrollHeight}px`)
-            } else {
-                setHeight("0px")
-            }
+            setHeight(open ? `${contentRef.current.scrollHeight}px` : "0px")
         }
     }, [open])
+
+    useEffect(() => {
+        setOpen(defaultOpen)
+    }, [resetKey, defaultOpen])
 
     return (
         <div className={!open ? styles.border : ""}>

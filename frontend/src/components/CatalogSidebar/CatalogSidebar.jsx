@@ -7,12 +7,20 @@ import FilterSection from "./../FilterSection/FilterSection"
 import SearchInput from "../SearchInput/SearchInput"
 import Button from "../Button/Button"
 
-function generateFiltersData(products) {
-    const brands = [...new Set(products.map((p) => p.brand))]
-    const colors = [...new Set(products.map((p) => p.color))]
-    const types = [...new Set(products.map((p) => p.type))]
-
-    const allSizes = ["XS", "S", "M", "L", "XL", "XXL"]
+/**
+ * Формирует "справочник" опций для фильтров на основе имеющихся товаров.
+ * Возвращает:
+ *  - brands: массив брендов, найденных в allProducts
+ *  - colors: массив цветов, найденных в allProducts
+ *  - types: массив типов, найденных в allProducts
+ *  - sizes:
+ *      - all: полный набор возможных размеров (жёстко задан)
+ *      - available: размеры, которые реально присутствуют у товаров
+ */
+function generateFiltersData(products, allSizes) {
+    const brands = [...new Set(products.map((p) => p.brand))].filter(Boolean)
+    const colors = [...new Set(products.map((p) => p.color))].filter(Boolean)
+    const types = [...new Set(products.map((p) => p.type))].filter(Boolean)
 
     const availableSizes = Array.from(new Set(products.flatMap((p) => p.sizes || [])))
 
@@ -28,27 +36,73 @@ function generateFiltersData(products) {
 }
 
 export default function CatalogSidebar() {
-    const { products, isLoading } = useContext(CatalogContext)
+    const { allProducts, isLoading, allSizes, setFilters } = useContext(CatalogContext)
     const [brandSearch, setBrandSearch] = useState("")
-    const [selectedBrands, setSelectedBrands] = useState([])
+    const [resetKey, setResetKey] = useState(0)
+    const [localFilters, setLocalFilters] = useState({
+        brands: [],
+        colors: [],
+        types: [],
+        sizes: [],
+        price: {
+            min: null,
+            max: null,
+        },
+    })
 
-    const filtersData = generateFiltersData(products)
+    const filtersData = generateFiltersData(allProducts, allSizes)
 
-    const handleBrandChange = (brand, checked) => {
-        setSelectedBrands((prev) => (checked ? [...prev, brand] : prev.filter((b) => b !== brand)))
+    /**
+     * toggleFilter(category, value, checked)
+     * Универсальная функция для включения/выключения значения в локальном наборе фильтров.
+     * category: 'brands' | 'colors' | 'types' | 'sizes'
+     */
+    const toggleFilter = (category, value, checked) => {
+        setLocalFilters((prev) => {
+            const current = prev[category] || []
+            return {
+                ...prev,
+                [category]: checked ? [...current, value] : current.filter((v) => v !== value),
+            }
+        })
     }
 
+    // SearchedBrands — бренды, соответствующие текущему тексту поиска.
     const searchedBrands = useMemo(() => {
         return filtersData.brands.filter((brand) =>
             brand.toLowerCase().includes(brandSearch.toLocaleLowerCase())
         )
     }, [filtersData.brands, brandSearch])
 
+    //displayBrands — список брендов, отображаемых в UI.
     const displayBrands = useMemo(() => {
         const searchedSet = new Set(searchedBrands)
-        const selectedButHidden = selectedBrands.filter((brand) => !searchedSet.has(brand))
+        const selectedButHidden = (localFilters.brands || []).filter((brand) => !searchedSet.has(brand))
+
         return [...searchedBrands, ...selectedButHidden]
-    })
+    }, [searchedBrands, localFilters.brands])
+
+    // Нажатие кнопки "Применить": передаём локальные фильтры в контекст
+    const handleApply = () => {
+        setFilters(localFilters)
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    // Нажатие кнопки "Сбросить": очищение локальных и глобальных фильтров
+    const handleReset = () => {
+        const resetState = {
+            brands: [],
+            colors: [],
+            types: [],
+            sizes: [],
+            price: { min: null, max: null },
+        }
+        setLocalFilters(resetState)
+        setFilters(resetState)
+        setBrandSearch("")
+        setResetKey((prev) => prev + 1)
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
 
     if (isLoading) {
         return (
@@ -60,11 +114,11 @@ export default function CatalogSidebar() {
 
     return (
         <aside className={styles.sidebar}>
-            <FilterSection title="Брэнд" defaultOpen>
-                <SearchInput placeholder="Поиск брэнда ..." onSearch={setBrandSearch} />
+            <FilterSection title="Брэнд" defaultOpen resetKey={resetKey}>
+                <SearchInput key={resetKey} placeholder="Поиск брэнда ..." onSearch={setBrandSearch} />
                 <ul className={styles.checkboxList}>
                     {displayBrands.map((brand) => {
-                        const isSelected = selectedBrands.includes(brand)
+                        const isSelected = localFilters.brands.includes(brand)
                         const isHiddenBySearch = !searchedBrands.includes(brand)
 
                         return (
@@ -76,7 +130,7 @@ export default function CatalogSidebar() {
                                     <input
                                         type="checkbox"
                                         checked={isSelected}
-                                        onChange={(e) => handleBrandChange(brand, e.target.checked)}
+                                        onChange={(e) => toggleFilter("brands", brand, e.target.checked)}
                                     />
                                     <span>{brand}</span>
                                 </label>
@@ -87,17 +141,23 @@ export default function CatalogSidebar() {
                 </ul>
             </FilterSection>
 
-            <FilterSection title="Размер">
+            <FilterSection title="Размер" resetKey={resetKey}>
                 <ul className={styles.checkboxList}>
                     {filtersData.sizes.all.map((size) => {
                         const isAvailable = filtersData.sizes.available.includes(size)
+                        const isSelected = localFilters.sizes.includes(size)
                         return (
                             <li key={size}>
                                 <label
                                     className={`${styles.checkboxLabel} ${
                                         !isAvailable ? styles.disabled : ""
                                     }`}>
-                                    <input type="checkbox" disabled={!isAvailable} />
+                                    <input
+                                        type="checkbox"
+                                        disabled={!isAvailable}
+                                        checked={isSelected}
+                                        onChange={(e) => toggleFilter("sizes", size, e.target.checked)}
+                                    />
                                     <span>{size}</span>
                                 </label>
                             </li>
@@ -106,35 +166,53 @@ export default function CatalogSidebar() {
                 </ul>
             </FilterSection>
 
-            <FilterSection title="Тип">
+            <FilterSection title="Тип" resetKey={resetKey}>
                 <ul className={styles.checkboxList}>
-                    {filtersData.types.map((type) => (
-                        <li key={type}>
-                            <label className={styles.checkboxLabel}>
-                                <input type="checkbox" />
-                                <span>{type}</span>
-                            </label>
-                        </li>
-                    ))}
+                    {filtersData.types.map((type) => {
+                        const isSelected = localFilters.types.includes(type)
+
+                        return (
+                            <li key={type}>
+                                <label className={styles.checkboxLabel}>
+                                    <input
+                                        type="checkbox"
+                                        checked={isSelected}
+                                        onChange={(e) => toggleFilter("types", type, e.target.checked)}
+                                    />
+                                    <span>{type}</span>
+                                </label>
+                            </li>
+                        )
+                    })}
                 </ul>
             </FilterSection>
 
-            <FilterSection title="Цвет">
+            <FilterSection title="Цвет" resetKey={resetKey}>
                 <ul className={styles.checkboxList}>
-                    {filtersData.colors.map((color) => (
-                        <li key={color}>
-                            <label className={styles.checkboxLabel}>
-                                <input type="checkbox" />
-                                <span>{color}</span>
-                            </label>
-                        </li>
-                    ))}
+                    {filtersData.colors.map((color) => {
+                        const isSelected = localFilters.colors.includes(color)
+
+                        return (
+                            <li key={color}>
+                                <label className={styles.checkboxLabel}>
+                                    <input
+                                        type="checkbox"
+                                        checked={isSelected}
+                                        onChange={(e) => toggleFilter("colors", color, e.target.checked)}
+                                    />
+                                    <span>{color}</span>
+                                </label>
+                            </li>
+                        )
+                    })}
                 </ul>
             </FilterSection>
 
             <div className={styles.filterActions}>
-                <Button variant="secondary">Сбросить</Button>
-                <Button>Применить</Button>
+                <Button variant="secondary" onClick={handleReset}>
+                    Сбросить
+                </Button>
+                <Button onClick={handleApply}>Применить</Button>
             </div>
         </aside>
     )

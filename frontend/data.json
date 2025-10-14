@@ -104,7 +104,7 @@
         "type": "Платье",
         "date": "2025-01-07",
         "color": "Красный",
-        "sizes": [ "S", "M", "L"],
+        "sizes": ["S", "M", "L"],
         "brand": "New Balance"
     },
     {
@@ -152,7 +152,7 @@
         "type": "Шорты",
         "date": "2024-01-03",
         "color": "Синий",
-        "sizes": ["28", "30", "32", "34", "36"],
+        "sizes": ["L"],
         "brand": "Adidas"
     },
     {
@@ -284,7 +284,7 @@
         "type": "Боди",
         "date": "2023-12-23",
         "color": "Белый",
-        "sizes": [ "S", "M", "L"],
+        "sizes": ["S", "M", "L"],
         "brand": "Reebok"
     },
     {
@@ -428,7 +428,7 @@
         "type": "Топ",
         "date": "2023-12-11",
         "color": "Красный",
-        "sizes": [ "S", "M", "L"],
+        "sizes": ["S", "M", "L"],
         "brand": "Under Armour"
     },
     {
@@ -500,7 +500,7 @@
         "type": "Куртка",
         "date": "2023-12-05",
         "color": "Желтый",
-        "sizes": ["S", "M", "L", "XL"],
+        "sizes": ["S"],
         "brand": "Adidas"
     },
     {
