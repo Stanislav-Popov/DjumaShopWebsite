@@ -6,19 +6,19 @@ import styles from "./button.module.css"
 // sizes: small, medium, large
 
 export default function Button({
+    id,
     children,
     onClick,
     disabled = false,
     size = "medium",
     variant = "primary",
     type = "button",
+    className = "",
 }) {
+    const classes = `${styles.button} ${styles[size] ?? ""} ${styles[variant] ?? ""} ${className}`.trim()
+
     return (
-        <button
-            type={type}
-            onClick={onClick}
-            disabled={disabled}
-            className={`${styles.button} ${styles[size]} ${styles[variant]}`}>
+        <button key={id} type={type} onClick={onClick} disabled={disabled} className={classes}>
             {children}
         </button>
     )
